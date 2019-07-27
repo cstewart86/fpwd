@@ -1,8 +1,8 @@
 ---
-title: "Values"
+title: "Volunteer in Uganda"
 image: /img/about-jumbotron.jpg
 values:
-  - heading: "Shade-grown coffee"
+  - heading: "Volunteer at our disability centre in Uganda"
     text: >
       Coffee is a small tree or shrub that grows in the forest
       understory in its wild form, and traditionally was grown
