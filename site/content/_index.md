@@ -1,7 +1,7 @@
 ---
 title: Friends of People with Disabilities
 subtitle: ' Caring for disabled children in Uganda'
-image: /img/home-jumbotron.jpg
+image: /img/232C5FE0-3BB4-4398-ADB4-F05D1D5B86DD.jpeg
 blurb:
   heading: What we do
   text: |-
