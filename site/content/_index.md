@@ -4,10 +4,18 @@ subtitle: ' Caring for disabled children in Uganda'
 image: /img/232C5FE0-3BB4-4398-ADB4-F05D1D5B86DD.jpeg
 blurb:
   heading: What we do
-  text: |-
-    Lorem ipsum dolor sit amet.
+  text: >-
+    We're Friends of People with Disabilities, a charity based in Kampala,
+    Uganda which cares for children with disabilities.
 
-    Lorem ipsum.
+
+    There is a stigma around disability in Uganda, with many disabled children
+    being neglected by their families.
+
+
+    Friends of People with Disabilities provides a safe and nurturing
+    environment for children with disabilities, providing them with education
+    and healthcare.
 volunteer:
   heading: Looking to volunteer in Uganda?
   text: >-
