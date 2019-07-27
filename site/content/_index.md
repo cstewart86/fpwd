@@ -4,7 +4,10 @@ subtitle: ' Caring for disabled children in Uganda'
 image: /img/home-jumbotron.jpg
 blurb:
   heading: What we do
-  text: Lorem ipsum dolor sit amet.
+  text: |-
+    Lorem ipsum dolor sit amet.
+
+    Lorem ipsum.
 volunteer:
   heading: Looking to volunteer in Uganda?
   text: >-
