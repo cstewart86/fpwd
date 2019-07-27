@@ -16,6 +16,11 @@ blurb:
     Friends of People with Disabilities provides a safe and nurturing
     environment for children with disabilities, providing them with education
     and healthcare.
+
+
+    We care for 20 children with disabilities such as autism, Down syndrome,
+    cerebral palsy, epilepsy, sickle cell anemia, deafness, attention deficit
+    disorder and general learning difficulties.
 volunteer:
   heading: Looking to volunteer in Uganda?
   text: >-
