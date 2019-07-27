@@ -51,14 +51,14 @@ collections: # A list of collections the CMS should be able to edit
               - label: Text
                 name: text
                 widget: text
-      - file: "site/content/values/_index.md"
-        label: "Values Page"
-        name: "values"
+      - file: "site/content/donate/_index.md"
+        label: "Donate Page"
+        name: "donate"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
-          - label: Values
-            name: values
+          - label: Donate
+            name: donate
             widget: list
             fields:
               - {label: Heading, name: heading, widget: string}
