@@ -22,7 +22,7 @@ donate:
   body: |-
     Lorem
 
-    Ipsum
+    ## Ipsum
 
     Dolor
 
