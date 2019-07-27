@@ -34,6 +34,32 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Donate", name: "donate", widget: "object", fields: [
               {label: "Heading", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "markdown"}]}
+      - file: "site/content/volunteer/_index.md"
+        label: "Volunteer Page"
+        name: "volunteer"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - label: Volunteer
+            name: volunteer
+            widget: list
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - {label: Text, name: text, widget: text}
+              - {label: Image, name: imageUrl, widget: image}
+      - file: "site/content/donate/_index.md"
+        label: "Donate Page"
+        name: "donate"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - label: Donate
+            name: donate
+            widget: list
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - {label: Text, name: text, widget: text}
+              - {label: Image, name: imageUrl, widget: image}
       - file: "site/content/contact/_index.md"
         label: "Contact Page"
         name: "contact"
@@ -51,16 +77,3 @@ collections: # A list of collections the CMS should be able to edit
               - label: Text
                 name: text
                 widget: text
-      - file: "site/content/donate/_index.md"
-        label: "Donate Page"
-        name: "donate"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - label: Donate
-            name: donate
-            widget: list
-            fields:
-              - {label: Heading, name: heading, widget: string}
-              - {label: Text, name: text, widget: text}
-              - {label: Image, name: imageUrl, widget: image}
