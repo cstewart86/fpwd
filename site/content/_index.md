@@ -1,21 +1,20 @@
 ---
-title: Friends of people with disabilities
-subtitle: Providing education and healthcare to disabled children in Uganda
+title: Friends of People with Disabilities
+subtitle: ' Caring for disabled children in Uganda'
 image: /img/home-jumbotron.jpg
 blurb:
-  heading: Why Kaldi?
-  text: >-
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+  heading: What we do
+  text: Lorem ipsum dolor sit amet.
 intro:
-  heading: What we offer
+  heading: Looking to volunteer in Uganda?
   text: >-
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone.
+    If you're looking to volunteer in Uganda, we'd love for you to consider
+    spending time at Friends of People with Disabilities.
+
+
+    We're really passionate about providing education and healthcare to disabled
+    children in our local community of Kampala, Uganda and we rely on volunteers
+    to help.
 products:
   - image: img/illustrations-coffee.svg
     text: >-
