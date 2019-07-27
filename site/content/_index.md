@@ -19,14 +19,13 @@ volunteer:
     children in our local community of Kampala, Uganda and we rely on volunteers
     to help.
 donate:
-  body: |-
-    Lorem
+  body: >-
+    We're a small charity with a big mission and we rely on the generosity of
+    our supporters to carry out our work.
 
-    ## Ipsum
 
-    Dolor
-
-    Sit amet.
+    Your donation will help us to maintain our high standards of care and help
+    us to support more disabled children and their families.
   heading: Support our work with a donation
 ---
 
