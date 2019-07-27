@@ -30,11 +30,13 @@ products:
       own beans or just bought your first french press, you’ll find a gadget to
       fall in love with in our shop.
 values:
-  heading: Our values
+  heading: Support our work with a donation
   text: >-
-    Coffee is an amazing part of human culture but it has a dark side too – one
-    of colonialism and mindless abuse of natural resources and human lives. We
-    want to turn this around and return the coffee trade to the drink’s
-    exhilarating, empowering and unifying nature.
+    We're a small charity with a big mission and we rely on donations to support
+    our work.
+
+
+    Help us in our mission to support more disabled children and their families
+    by making a donation.
 ---
 
