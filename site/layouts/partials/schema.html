@@ -7,7 +7,7 @@
         "@type":"Organization",
         "@id":"{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}/#organization",
         "name":"{{ $.Site.Title }}",
-        "url":"{{ $.Site.BaseURL }}",
+        "url":"{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}",
         "founders":
         {
             "@type": "Person",
@@ -23,21 +23,21 @@
         "logo":
         {
             "@type":"ImageObject",
-            "@id":"{{ $.Site.BaseURL }}/#logo",
-            "url":"{{ $.Site.BaseURL }}/logo.png",
+            "@id":"{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}/#logo",
+            "url":"{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}/logo.png",
             "caption":"{{ $.Site.Title }}"
         },
         "image":{
-            "@id":"{{ $.Site.BaseURL }}/#logo"
+            "@id":"{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}/#logo"
         }
     },
     {
         "@type":"WebSite",
-        "@id":"{{ $.Site.BaseURL }}/#website",
-        "url":"{{ $.Site.BaseURL }}",
+        "@id":"{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}/#website",
+        "url":"{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}",
         "name":"{{ $.Site.Title }}",
         "publisher":{
-            "@id":"{{ $.Site.BaseURL }}/#organization"
+            "@id":"{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}/#organization"
         }
     }]
 }
