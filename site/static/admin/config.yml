@@ -13,6 +13,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Intro Blurb", name: "description", widget: "text"}
+      - {label: "Meta description", name: "metaDescription", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
@@ -24,6 +25,7 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Meta description, name: metaDescription, widget: text}
           - {label: Image, name: image, widget: image}
           - {label: "Blurb", name: blurb, widget: object, fields: [
               {label: "Heading", name: "heading", widget: string},
@@ -40,6 +42,7 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
+          - {label: Meta description, name: metaDescription, widget: text}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "site/content/donate/_index.md"
         label: "Donate Page"
@@ -47,10 +50,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
+          - {label: Meta description, name: metaDescription, widget: text}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "site/content/contact/_index.md"
         label: "Contact Page"
         name: "contact"
         fields:
           - {label: Title, name: title, widget: string}
+          - {label: Meta description, name: metaDescription, widget: text}
           - {label: Body, name: body, widget: markdown}
