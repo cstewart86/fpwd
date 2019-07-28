@@ -2,7 +2,6 @@ baseurl = "/"
 languageCode = "en-gb"
 languageLang = "en-gb"
 title = "Friends of People with Disabilities"
-description = "We’re Friends of People with Disabilities, a charity based in Kampala, Uganda which cares for children with disabilities. We care for 20 children."
 
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details: 
