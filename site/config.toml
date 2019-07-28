@@ -2,6 +2,7 @@ baseurl = "/"
 languageCode = "en-gb"
 languageLang = "en-gb"
 title = "Friends of People with Disabilities"
+description = "lorem ipsum"
 
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details: 
