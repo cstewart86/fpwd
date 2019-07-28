@@ -5,7 +5,7 @@
     [
     {
         "@type":"Organization",
-        "@id":"{{ $.Site.BaseURL }}/#organization",
+        "@id":"{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}/#organization",
         "name":"{{ $.Site.Title }}",
         "url":"{{ $.Site.BaseURL }}",
         "founders":
