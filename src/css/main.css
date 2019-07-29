@@ -81,6 +81,7 @@ a {
   color: #E55812;
   text-decoration: none;
   background-color: transparent;
+  border-bottom: 2px solid #E55812;
 }
 
 a:hover {
@@ -88,19 +89,7 @@ a:hover {
   text-decoration: underline;
 }
 
-a:not([href]):not([tabindex]) {
-  color: inherit;
-  text-decoration: none;
-}
 
-a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:not([href]):not([tabindex]):focus {
-  outline: 0;
-}
 
 .background-eggshell {
   background-color: #EFE7DA;
