@@ -32,6 +32,7 @@ body {
 
 footer {
   background-color: #2D2D2A;
+  padding: 10px;
 }
 
 [tabindex="-1"]:focus {
@@ -264,6 +265,7 @@ hr {
 
 .list-unstyled {
   list-style: none;
+  padding: 0;
 }
 
 .list-inline {
@@ -3502,7 +3504,6 @@ input[type="button"].btn-block {
   content: "";
   background: no-repeat center center;
   background-size: 100% 100%;
-color: #000;
 }
 
 @media (max-width: 575.98px) {
