@@ -246,7 +246,7 @@ h1 {
   color: #fff;
   background-color: #e55812;
   padding: 5px;
-  width: 55%;
+  max-width: 55%;
 }
 
 h2 {
