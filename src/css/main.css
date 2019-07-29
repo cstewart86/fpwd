@@ -52,7 +52,7 @@ hr {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
@@ -100,6 +100,10 @@ a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
 
 a:not([href]):not([tabindex]):focus {
   outline: 0;
+}
+
+.background-eggshell {
+  background-color: #EFE7DA;
 }
 
 img {
