@@ -32,7 +32,12 @@ body {
 
 footer {
   background-color: #2D2D2A;
+  color: #fff;
   padding: 10px;
+}
+
+footer nav {
+  padding-left: 10px;
 }
 
 [tabindex="-1"]:focus {
