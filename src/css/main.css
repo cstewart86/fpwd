@@ -1,8 +1,33 @@
+/*! TACHYONS v4.5.5 | http://tachyons.io */
+
+/*
+ *
+ *      ________            ______
+ *      ___  __/_____ _________  /______  ______________________
+ *      __  /  _  __ `/  ___/_  __ \_  / / /  __ \_  __ \_  ___/
+ *      _  /   / /_/ // /__ _  / / /  /_/ // /_/ /  / / /(__  )
+ *      /_/    \__,_/ \___/ /_/ /_/_\__, / \____//_/ /_//____/
+ *                                 /____/
+ *
+ *    TABLE OF CONTENTS
+ *
+ *    1. External Library Includes
+ *       - Reset.css | http://meyerweb.com/eric/tools/css/reset/
+ *    2. Tachyons Modules
+ *    3. Variables
+ *       - Media Queries
+ *       - Colors
+ *    4. Debugging
+ *       - Debug all
+ *       - Debug children
+ *
+ */
+
+
 /* External Library Includes */
 @import './imports/_reset';
 
 /* Modules */
-@import './imports/_grid';
 @import './imports/_box-sizing';
 @import './imports/_images';
 @import './imports/_background-size';
@@ -13,6 +38,8 @@
 @import './imports/_border-style';
 @import './imports/_border-widths';
 @import './imports/_border-colors';
+@import './imports/_code';
+@import './imports/_coordinates';
 @import './imports/_clears';
 @import './imports/_display';
 @import './imports/_flexbox';
@@ -43,6 +70,7 @@
 @import './imports/_z-index';
 @import './imports/_styles';
 @import './imports/_buttons';
+@import './imports/_svg';
 @import './imports/_cms';
 
 /* Variables */
@@ -50,3 +78,10 @@
 @import './imports/_colors';
 @import './imports/_media-queries';
 @import './imports/_variables';
+
+/* Debugging */
+@import './imports/_debug-children';
+@import './imports/_debug-grid';
+
+/* Uncomment out the line below to help debug layout issues */
+/*@import './imports/_debug';*/
