@@ -37,6 +37,10 @@ body {
   background-color: #f9fbf2;
 }
 
+footer {
+  background-color: #2D2D2A;
+}
+
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }
