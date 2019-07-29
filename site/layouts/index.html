@@ -1,7 +1,8 @@
-<main class="container">
 {{ define "main" }}
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
+
+<main>
 
 {{ partial "short-text" .Params.blurb}}
 
@@ -11,5 +12,6 @@
 
 {{ partial "blog" . }}
 
-{{ end }}
 </main>
+
+{{ end }}
