@@ -67,6 +67,10 @@ ul {
   margin-bottom: 1rem;
 }
 
+ul {
+  list-style-type: square
+}
+
 strong {
   font-weight: bolder;
 }
