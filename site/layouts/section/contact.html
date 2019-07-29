@@ -1,13 +1,13 @@
 {{ define "main" }}
 
-<div class="ph3 bg-off-white">
-	<div class="center mw6 pv3">
+<main class="container">
+  <section class="row">
+    <div class="col-md-12">
 
-		{{ .Content }}
+      {{ .Content }}
 
-		{{ partial "contact-form" . }}
-
-	</div>
-</div>
+    </div>
+  </section>
+</main>
 
 {{ end }}
