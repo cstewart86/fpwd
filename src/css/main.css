@@ -37,12 +37,6 @@ footer {
   outline: 0 !important;
 }
 
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
-}
-
 h1, h2, h3, h4 {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
@@ -93,11 +87,6 @@ a:hover {
 img {
   vertical-align: middle;
   border-style: none;
-}
-
-svg {
-  overflow: hidden;
-  vertical-align: middle;
 }
 
 label {
@@ -171,22 +160,6 @@ fieldset {
   padding: 0;
   margin: 0;
   border: 0;
-}
-
-legend {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  padding: 0;
-  margin-bottom: .5rem;
-  font-size: 1.5rem;
-  line-height: inherit;
-  color: inherit;
-  white-space: normal;
-}
-
-progress {
-  vertical-align: baseline;
 }
 
 [hidden] {
