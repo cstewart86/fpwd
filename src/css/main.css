@@ -69,7 +69,7 @@ strong {
 }
 
 a {
-  color: #E55812;
+  color: #676767;
   text-decoration: none;
   background-color: transparent;
   border-bottom: 2px solid #E55812;
@@ -310,11 +310,6 @@ h4 {
 
 .form-control::placeholder {
   color: #6c757d;
-  opacity: 1;
-}
-
-.form-control:disabled, .form-control[readonly] {
-  background-color: #e9ecef;
   opacity: 1;
 }
 
