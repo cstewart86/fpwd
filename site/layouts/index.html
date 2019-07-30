@@ -6,9 +6,13 @@
 
 {{ partial "short-text" .Params.blurb}}
 
+<section>
+
 {{ partial "2-up" .Params }}
 
 {{ partial "text-and-image" (dict "heading" .Params.donate.heading "text" .Params.donate.text "buttonText" "Donate now" "buttonLink" "/donate") }}
+
+</section>
 
 {{ partial "blog" . }}
 
