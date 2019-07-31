@@ -26,3 +26,4 @@ function onIntersection(entries) {
   });
 }
 }
+window.addEventListener('load',lazyload,false);
