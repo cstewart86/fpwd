@@ -1,3 +1,4 @@
+function lazyload() {
 // Get all of the images that are marked up to lazy load
 const images = document.querySelectorAll('.lazy');
 const config = {
@@ -23,4 +24,5 @@ function onIntersection(entries) {
       preloadImage(entry.target);
     }
   });
+}
 }
