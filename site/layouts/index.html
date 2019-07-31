@@ -2,19 +2,28 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
 
-<main class="container">
+<main>
+  <section class="container background-eggshell">
 
 {{ partial "short-text" .Params.blurb}}
+    
+  </section>
 
-<section class="row">
+<section class="container">
+  <div class="row">
 
 {{ partial "2-up" .Params }}
 
 {{ partial "text-and-image" (dict "heading" .Params.donate.heading "text" .Params.donate.text "buttonText" "Donate now" "buttonLink" "/donate") }}
-
+    
+  </div>
 </section>
 
+<section class="container">
+    
 {{ partial "blog" . }}
+  
+</section>
 
 </main>
 
