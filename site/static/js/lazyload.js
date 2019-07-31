@@ -11,3 +11,16 @@ let observer = new IntersectionObserver(onIntersection, config);
   images.forEach(image => {
     observer.observe(image);
   });
+
+function onIntersection(entries) {
+  // Loop through the entries
+  entries.forEach(entry => {
+    // Are we in viewport?
+    if (entry.intersectionRatio > 0) {
+
+      // Stop watching and load the image
+      observer.unobserve(entry.target);
+      preloadImage(entry.target);
+    }
+  });
+}
