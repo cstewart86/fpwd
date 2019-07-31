@@ -23,4 +23,4 @@
 .navbar > .container{-ms-flex-wrap:nowrap;flex-wrap:nowrap}
 .navbar .navbar-collapse{display:-ms-flexbox !important;display:flex !important;-ms-flex-preferred-size:auto;flex-basis:auto}
 .navbar .navbar-toggle{display:none}
-@media (max-width:767.98px){.navbar > .container{padding-right:0;padding-left:0}.navbar{background-color:#3D8705}h1{font-size:3rem}}
+@media (max-width:767.98px){.navbar > .container{padding-right:0;padding-left:0}.navbar{background-color:red}h1{font-size:3rem}}
