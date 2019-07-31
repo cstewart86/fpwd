@@ -1,5 +1,5 @@
 // Get all of the images that are marked up to lazy load
-const images = document.querySelectorAll('.js-lazy-image');
+const images = document.querySelectorAll('.lazy');
 const config = {
   // If the image gets within 50px in the Y axis, start the download.
   rootMargin: '50px 0px',
