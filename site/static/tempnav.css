@@ -16,10 +16,11 @@
 .navbar-toggle.collapsed span:nth-child(2){margin-top:6px;margin-bottom:4px;-webkit-transition:-webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);transition:-webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);transition:transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);transition:transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);-webkit-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0)}
 .navbar-toggle span:nth-child(1){-webkit-transition:-webkit-transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);transition:-webkit-transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);transition:transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);transition:transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg) -ms-transform-origin:90% 920%;-webkit-transform-origin:90% 920%;transform-origin:90% 920%}
 .navbar-toggle span:nth-child(2){-webkit-transition:-webkit-transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);transition:-webkit-transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);transition:transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);transition:transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg) -ms-transform-origin:50% -1100%;-webkit-transform-origin:50% -1100%;transform-origin:50% -1100%}
+@media (min-width:768px){
 .navbar{-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:start;justify-content:flex-start}
 .navbar .navbar-nav{-ms-flex-direction:row;flex-direction:row}
 .navbar .navbar-nav .menu-item{padding-right:0.5rem;padding-left:0.5rem}
 .navbar > .container{-ms-flex-wrap:nowrap;flex-wrap:nowrap}
 .navbar .navbar-collapse{display:-ms-flexbox !important;display:flex !important;-ms-flex-preferred-size:auto;flex-basis:auto}
-.navbar .navbar-toggle{display:none}
+  .navbar .navbar-toggle{display:none}}
 @media (max-width:767.98px){.navbar > .container{padding-right:0;padding-left:0}}
