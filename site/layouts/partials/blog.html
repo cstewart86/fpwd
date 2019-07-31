@@ -1,4 +1,4 @@
-<section class="row background-eggshell">
+<div class="row">
 	<div class="col-md-12">
 		<h2>Latest news</h2>
 		{{ range first 4 (where .Data.Pages "Type" "news") }}
@@ -6,4 +6,4 @@
 		{{ end }}
 		<a href="/news" class="btn raise">More news</a>
 	</div>
-</section>
+</div>
