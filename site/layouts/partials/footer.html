@@ -24,7 +24,10 @@
 </footer>
 
 <script src="/js/nav.js"></script>
-<script src="/js/lazyload.js"></script>
+<script type="module">
+    import LazyLoad from "/js/lazyload.js";
+    LazyLoad.init();
+  </script>
 <link rel="stylesheet" href="/tempnav.css">
 
 {{ partial "schema" . }}
