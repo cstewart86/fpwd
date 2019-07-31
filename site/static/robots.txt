@@ -2,12 +2,6 @@
 
 User-agent: *
 Disallow: /admin/
- 
-User-agent: NinjaBot
-Disallow: /
-
-User-agent: deepcrawl
-Disallow: /
 
 Sitemap: https://fpwd.netlify.com/sitemap.xml
 
