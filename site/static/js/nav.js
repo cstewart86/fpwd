@@ -1,4 +1,4 @@
-window.onload=function(){
+function toggleNav(){
 	const navbarToggler=document.querySelector('.navbar-toggle');
 	const menuCollapse=document.querySelector('.navbar-collapse');
 	navbarToggler.addEventListener('click',function(){
@@ -14,4 +14,10 @@ window.onload=function(){
 	},
 	{passive:!0}
 	);
+}
+
+if (window.addEventListener){
+    window.addEventListener('load', toggleNav, false);
+} else {
+    window.attachEvent('onload', toggleNav);
 }
