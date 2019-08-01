@@ -1,5 +1,5 @@
 .menu-item a{display:inline;border-bottom:none;font-weight:normal;color:#F0FCEA}
-
+.collapse:not(.show){display:none}
 
 
 
