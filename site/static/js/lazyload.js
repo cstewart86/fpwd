@@ -13,7 +13,6 @@ let config,
 
 /**
  * Fetches the image for the given URL
- * @param {string} url
  */
 function fetchImage(url) {
   return new Promise((resolve, reject) => {
@@ -26,7 +25,6 @@ function fetchImage(url) {
 
 /**
  * Preloads the image
- * @param {object} image
  */
 function preloadImage(image) {
   const src = image.dataset.src;
@@ -39,7 +37,6 @@ function preloadImage(image) {
 
 /**
  * Load all of the images immediately
- * @param {NodeListOf<Element>} images
  */
 function loadImagesImmediately(images) {
   // foreach() is not supported in IE
@@ -62,7 +59,6 @@ function disconnect() {
 
 /**
  * On intersection
- * @param {array} entries
  */
 function onIntersection(entries) {
   // Disconnect if we've already loaded all of the images
@@ -87,8 +83,6 @@ function onIntersection(entries) {
 
 /**
  * Apply the image
- * @param {object} img
- * @param {string} src
  */
 function applyImage(img, src) {
   // Prevent this from being lazy loaded a second time.
