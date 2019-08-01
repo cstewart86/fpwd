@@ -1,7 +1,11 @@
 
-  <div class="col-md-6">
-    <h2>{{.volunteer.heading}}</h2>
-    {{.volunteer.text | markdownify}}
-    <img src="image/placeholder.jpg" data-src="img/geraldine.jpg" width="540" height="405" alt="Geraldine, the founder of Friends of People with Disabilities, standing outside the disability centre" class="img-fluid js-lazy-image">
-    <a href="/volunteer/" class="btn">Learn about volunteering</a>
+  <div class="card">
+    <div class="card-body">
+      <h2>{{.volunteer.heading}}</h2>
+      {{.volunteer.text | markdownify}}
+      <img src="image/placeholder.jpg" data-src="img/geraldine.jpg" width="540" height="405" alt="Geraldine, the founder of Friends of People with Disabilities, standing outside the disability centre" class="img-fluid js-lazy-image">
+    </div>
+    <div class="card-footer">
+      <a href="/volunteer/" class="btn">Learn about volunteering</a>
+    </div>
   </div>
