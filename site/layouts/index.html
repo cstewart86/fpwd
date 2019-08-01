@@ -11,11 +11,13 @@
 
 <section class="container">
   <div class="row">
+     <div class="card-deck">
 
-{{ partial "2-up" .Params }}
+      {{ partial "2-up" .Params }}
 
-{{ partial "text-and-image" (dict "heading" .Params.donate.heading "text" .Params.donate.text "buttonText" "Donate now" "buttonLink" "/donate") }}
-    
+      {{ partial "text-and-image" (dict "heading" .Params.donate.heading "text" .Params.donate.text "buttonText" "Donate now" "buttonLink" "/donate") }}
+       
+    </div>  
   </div>
 </section>
 
