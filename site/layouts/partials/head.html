@@ -16,6 +16,8 @@
   <meta name="description" content="{{ .Params.metaDescription }}">
   <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
   <link rel="preload" href="/img/hero.jpg" type="image/jpeg" as="image">
+  <link rel="preload" href="/js/nav.js" as="script">
+  <link rel="preload" href="/js/lazyload.js" as="script">
 
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap" rel="stylesheet">
 
