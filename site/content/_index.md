@@ -4,7 +4,7 @@ subtitle: ' Caring for disabled children in Uganda'
 metaDescription: >-
   We’re Friends of People with Disabilities, a charity based in Kampala, Uganda
   which cares for children with disabilities. We care for 20 children.
-image: /img/232C5FE0-3BB4-4398-ADB4-F05D1D5B86DD.jpeg
+image: /img/hero.jpg
 blurb:
   heading: What we do
   text: >-
