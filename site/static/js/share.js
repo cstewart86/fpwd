@@ -1,3 +1,4 @@
+function sharePage() {
 let url = document.location.href;
 const canonicalElement = document.querySelector('link[rel=canonical]');
 if (canonicalElement !== null) {
@@ -14,4 +15,5 @@ if (navigator.share) {
   })
     .then(() => console.log('Successful share'))
     .catch((error) => console.log('Error sharing', error));
+}
 }
