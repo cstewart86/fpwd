@@ -4,7 +4,10 @@ const precacheFiles = [
   "/volunteer/",
   "/donate/",
   "/news/",
-  "/contact/"
+  "/contact/",
+  "/img/hero.jpg",
+  "/js/nav.js",
+  "/js/lazyload.js"  
 ];
 
 const offlineFallbackPage = "/offline/";
