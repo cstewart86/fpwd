@@ -4,7 +4,7 @@ const canonicalElement = document.querySelector('link[rel=canonical]');
 if (canonicalElement !== null) {
     url = canonicalElement.href;
 }
-let title = document.querySelector('h1');
+let title = document.querySelector('h1').textContent;
 let text = document.querySelector("meta[name='description']").getAttribute('content');
 
 if (navigator.share) {
