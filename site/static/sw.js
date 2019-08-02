@@ -1,5 +1,13 @@
-const CACHE = "fpwd:31-07-2019";
-const precacheFiles = [
+'use strict';
+
+const version = '02082019::';
+// Caches for different resources
+const coreCacheName = version + 'core';
+const pagesCacheName = version + 'pages';
+const assetsCacheName = version + 'assets';
+
+// Resources that will be always be cached
+const coreCacheUrls = [
   "/",
   "/volunteer/",
   "/donate/",
@@ -10,141 +18,120 @@ const precacheFiles = [
   "/js/lazyload.js"  
 ];
 
-const offlineFallbackPage = "/offline/";
-
-const networkFirstPaths = /^((?!.css|.js|.png|.jpg|.jpeg|.svg).)*$/ig;
-
-const avoidCachingPaths = /.*googletagmanager\.com.*|.*googleapis\.com.*/ig;
-
-function pathComparer(requestUrl, pathRegEx) {
-  return requestUrl.match(new RegExp(pathRegEx));
+function updateCoreCache() {
+  return caches.open(coreCacheName)
+    .then( cache => {
+      // Make installation contingent on storing core cache items
+      return cache.addAll(coreCacheUrls);
+    });
 }
 
-function comparePaths(requestUrl, pathsArray) {
-  if (requestUrl) {
-    for (let index = 0; index < pathsArray.length; index++) {
-      const pathRegEx = pathsArray[index];
-      if (pathComparer(requestUrl, pathRegEx)) {
-        return true;
+function addToCache(cacheName, request, response) {
+  caches.open(cacheName)
+    .then( cache => cache.put(request, response) );
+}
+
+    // Trim specified cache to max size
+function trimCache(cacheName, maxItems) {
+  caches.open(cacheName).then(function(cache) {
+    cache.keys().then(function(keys) {
+      if (keys.length > maxItems) {
+        cache.delete(keys[0]).then(trimCache(cacheName, maxItems));
       }
-    }
-  }
-
-  return false;
-}
-
-self.addEventListener("install", function (event) {
-  console.log("Install Event processing");
-
-  console.log("Skip waiting on install");
-  self.skipWaiting();
-
-  event.waitUntil(
-    caches.open(CACHE).then(function (cache) {
-      console.log("Caching pages during install");
-
-      return cache.addAll(precacheFiles);
-        return cache.add(offlineFallbackPage);
-      });
-    })
-  );
-});
-
-// Allow sw to control of current page
-self.addEventListener("activate", function (event) {
-  console.log("Claiming clients for current page");
-  event.waitUntil(self.clients.claim());
-});
-
-// If any fetch fails, it will look for the request in the cache and serve it from there first
-self.addEventListener("fetch", function (event) {
-  if (event.request.method !== "GET") return;
-
-  if (comparePaths(event.request.url, networkFirstPaths)) {
-    networkFirstFetch(event);
-  } else {
-    cacheFirstFetch(event);
-  }
-});
-
-function cacheFirstFetch(event) {
-  event.respondWith(
-    fromCache(event.request).then(
-      function (response) {
-        // The response was found in the cache so we responde with it and update the entry
-
-        // This is where we call the server to get the newest version of the
-        // file to use the next time we show view
-        event.waitUntil(
-          fetch(event.request).then(function (response) {
-            return updateCache(event.request, response);
-          })
-        );
-
-        return response;
-      },
-      function () {
-        // The response was not found in the cache so we look for it on the server
-        return fetch(event.request)
-          .then(function (response) {
-            // If request was success, add or update it in the cache
-            event.waitUntil(updateCache(event.request, response.clone()));
-
-            return response;
-          })
-          .catch(function (error) {
-            // The following validates that the request was for a navigation to a new document
-            if (event.request.destination !== "document" || event.request.mode !== "navigate") {
-              return;
-            }
-
-            console.log("Network request failed and no cache." + error);
-            // Use the precached offline page as fallback
-            return caches.open(CACHE).then(function (cache) {
-              cache.match(offlineFallbackPage);
-            });
-          });
-      }
-    )
-  );
-}
-
-function networkFirstFetch(event) {
-  event.respondWith(
-    fetch(event.request)
-      .then(function (response) {
-        // If request was success, add or update it in the cache
-        event.waitUntil(updateCache(event.request, response.clone()));
-        return response;
-      })
-      .catch(function (error) {
-        console.log("Network request Failed. Serving content from cache: " + error);
-        return fromCache(event.request);
-      })
-  );
-}
-
-function fromCache(request) {
-  // Check to see if you have it in the cache
-  // Return response
-  // If not in the cache, then return error page
-  return caches.open(CACHE).then(function (cache) {
-    return cache.match(request).then(function (matching) {
-      if (!matching || matching.status === 404) {
-        return Promise.reject("no-match");
-      }
-
-      return matching;
     });
   });
 }
 
-function updateCache(request, response) {
-  if (!comparePaths(request.url, avoidCachingPaths)) {
-    return caches.open(CACHE).then(function (cache) {
-      return cache.put(request, response);
-    });
+    // Remove old caches that done't match current version
+function clearCaches() {
+  return caches.keys().then(function(keys) {
+    return Promise.all(keys.filter(function(key) {
+        return key.indexOf(version) !== 0;
+      }).map(function(key) {
+        return caches.delete(key);
+      })
+    );
+  });
+}
+
+    // Check if request is something SW should handle
+function shouldFetch(event) {
+  let request = event.request;
+  let url = new URL(request.url);
+
+  return (request.method === 'GET' && url.origin === self.location.origin);
+}
+
+self.addEventListener('install', event => {
+  event.waitUntil(updateCoreCache()
+    .then(() => self.skipWaiting())
+  );
+});
+
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    clearCaches().then( () => {
+      return self.clients.claim();
+    })
+  );
+});
+
+self.addEventListener('message', event => {
+  if (event.data.command == 'trimCaches') {
+    trimCache(pagesCacheName, 20);
+    trimCache(assetsCacheName, 20);
+  }
+});
+
+
+self.addEventListener('fetch', event => {
+
+  let request = event.request,
+      acceptHeader = request.headers.get('Accept');
+
+  // Do not respond to non-GET requests
+  if (!shouldFetch(event)) {
+    event.respondWith(
+      fetch(request)
+        .catch( () => {
+          return caches.match('/offline/');
+        })
+      );
+    return;
   }
 
-  return Promise.resolve();
-}
+  // HTML Requests
+  if (acceptHeader.indexOf('text/html') !== -1) {
+    // Try network first
+    event.respondWith(
+      fetch(request)
+        .then(response => {
+          addToCache(pagesCacheName, request, response.clone());
+          return response;
+        })
+      // Try cache second with offline fallback
+      .catch( () => {
+        return caches.match(request).then( response => {
+            return response || caches.match('/offline/');
+        });
+      })
+    );
+
+  // Non-HTML Requests
+  } else if (acceptHeader.indexOf('text/html') == -1) {
+    event.respondWith(
+      caches.match(request)
+        .then( response => {
+          // Try cache, then network, then offline fallback
+          return response || fetch(request)
+            .then( response => {
+              addToCache(assetsCacheName, request, response.clone());
+              return response;
+            })
+          .catch( () => {
+            return new Response('<svg role="img" aria-labelledby="offline-title" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><title id="offline-title">Offline</title><g fill="none" fill-rule="evenodd"><path fill="#D8D8D8" d="M0 0h400v300H0z"/><text fill="#9B9B9B" font-family="Helvetica Neue,Arial,Helvetica,sans-serif" font-size="72" font-weight="bold"><tspan x="93" y="172">offline</tspan></text></g></svg>', { headers: { 'Content-Type': 'image/svg+xml' }});
+          });
+      })
+    );
+  }
+});
