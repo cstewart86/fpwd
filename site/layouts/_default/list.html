@@ -3,13 +3,13 @@
 {{ partial "jumbotron" (dict "imageUrl" "/img/hero.jpg" "title" "Latest news") }}
 
 <section class="container">
-  <ul class="row list-unstyled">
+  <div class="row">
       {{ range (.Paginator 4).Pages.ByPublishDate.Reverse }}
           <div class="col-md-12">
             {{ .Render "li"}}
           </div>
       {{ end }}
-  </ul>
+  </div>
   {{ partial "pagination" . }}
 </section>
 
