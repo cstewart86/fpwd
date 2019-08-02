@@ -5,10 +5,7 @@
 	<title>{{ .Title }} | {{ $.Site.Title }}</title>
 	{{ end }}
 
-	{{ $stylesheet := .Site.Data.webpack.main }}
-	{{ with $stylesheet.css }}
-	<link href="{{ relURL . }}" rel="stylesheet">
-	{{ end }}
+	<link rel="stylesheet" href="css/style.css">
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -16,7 +13,6 @@
 	<base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
 	<link rel="preload" href="/img/hero.jpg" type="image/jpeg" as="image">
 	<link rel="preload" href="/js/nav.js" as="script">
-
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap">
 
 	<!-- Favicons -->
