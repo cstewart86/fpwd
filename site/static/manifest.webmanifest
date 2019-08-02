@@ -1,5 +1,6 @@
 {
 	"name": "Friends of People with Disabilities",
+	"short_name": "FPWD",	
 	"icons": [
 		{
 			"src": "\/icons\/android-chrome-192x192.png",
@@ -12,6 +13,10 @@
 			"type": "image\/png"
 		}
 	],
+	"lang": "en-GB",
+	"scope": "/",
+	"start_url": "/?utm_source=homescreen%20icon",
 	"theme_color": "#E55812",
+	"background_color": "#EFE7DA",
 	"display": "standalone"
 }
