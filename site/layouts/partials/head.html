@@ -1,32 +1,29 @@
 <head>
-  {{ if .IsHome }}
-  <title>{{ $.Site.Title }}: Ugandan disability charity</title>
-  {{ else }}
-  <title>{{ .Title }} | {{ $.Site.Title }}</title>
-  {{ end }}
+	{{ if .IsHome }}
+	<title>{{ $.Site.Title }}: Ugandan disability charity</title>
+	{{ else }}
+	<title>{{ .Title }} | {{ $.Site.Title }}</title>
+	{{ end }}
 
+	{{ $stylesheet := .Site.Data.webpack.main }}
+	{{ with $stylesheet.css }}
+	<link href="{{ relURL . }}" rel="stylesheet">
+	{{ end }}
 
-  {{ $stylesheet := .Site.Data.webpack.main }}
-  {{ with $stylesheet.css }}
-    <link href="{{ relURL . }}" rel="stylesheet">
-  {{ end }}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="description" content="{{ .Params.metaDescription }}">
+	<base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
+	<link rel="preload" href="/img/hero.jpg" type="image/jpeg" as="image">
+	<link rel="preload" href="/js/nav.js" as="script">
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="{{ .Params.metaDescription }}">
-  <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
-  <link rel="preload" href="/img/hero.jpg" type="image/jpeg" as="image">
-  <link rel="preload" href="/js/nav.js" as="script">
-  <link rel="preload" href="/js/lazyload.js" as="script">
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap">
 
 	<!-- Favicons -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 	<link rel="manifest" href="/manifest.webmanifest">
-	<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400">
 	<meta name="theme-color" content="#E55812">
 
 	<!-- Open Graph -->
