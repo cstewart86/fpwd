@@ -3,7 +3,6 @@ const canonicalElement = document.querySelector('link[rel=canonical]');
 if (canonicalElement !== null) {
     url = canonicalElement.href;
 }
-navigator.share({url: url});
 
 if (navigator.share) {
   navigator.share({
