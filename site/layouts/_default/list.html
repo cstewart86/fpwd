@@ -4,6 +4,11 @@
 
 <section class="container">
   <div class="row">
+    <div class="col-md-12">
+      <p>Lorem ipsum.</p>
+    </div>
+  </div>
+  <div class="row">
       {{ range (.Paginator 4).Pages.ByPublishDate.Reverse }}
           <div class="col-md-12">
             {{ .Render "li"}}
