@@ -14,6 +14,7 @@ const coreCacheUrls = [
   "/news/",
   "/contact/",
   "/img/hero.jpg",
+  "/css/style.css",  
   "/js/nav.js",
   "/js/lazyload.js"  
 ];
