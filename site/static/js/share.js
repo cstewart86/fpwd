@@ -4,11 +4,12 @@ if (canonicalElement !== null) {
     url = canonicalElement.href;
 }
 let title = document.querySelector('h1');
+let text = document.querySelector("meta[name='description']").getAttribute('content');
 
 if (navigator.share) {
   navigator.share({
       title: title,
-      text: '',
+      text: text,
       url: url,
   })
     .then(() => console.log('Successful share'))
