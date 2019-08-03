@@ -15,8 +15,6 @@ if (canonicalElement !== null) {
 let title = document.querySelector('h1').textContent;
 let text = document.querySelector("meta[name='description']").getAttribute('content');
 
-if (navigator.share) {
-
   navigator.share({
       title: title,
       text: text,
@@ -24,5 +22,4 @@ if (navigator.share) {
   })
     .then(() => console.log('Successful share'))
     .catch((error) => console.log('Error sharing', error));
-}
 }
