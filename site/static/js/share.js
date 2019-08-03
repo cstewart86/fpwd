@@ -1,8 +1,9 @@
- let shareButton = document.querySelector('.share-button');
+let shareButton = document.querySelector('.share-button');
 
 if (navigator.share) {
 
   shareButton.style.display = "block";
+  shareButton.addEventListener("click", sharePage);
 
 }
 
