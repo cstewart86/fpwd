@@ -27,6 +27,7 @@
 	<meta name="theme-color" content="#E55812">
 
 	<!-- Open Graph -->
+	<meta property="og:site_name" content="{{ $.Site.Title }}">
 	<meta property="og:type" content="business.business">
 	<meta property="og:title" content="{{ if .IsHome }}{{ $.Site.Title }}: Ugandan disability charity{{ else }}{{ .Title }} | {{ $.Site.Title }}{{ end }}">
 	<meta property="og:description" content="{{ .Params.metaDescription }}">
