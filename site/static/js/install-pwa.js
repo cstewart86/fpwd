@@ -36,4 +36,7 @@ async function install() {
 
 
   }
+  let a2hsBtn = document.querySelector(".ad2hs-prompt");
+
+  a2hsBtn.style.display = "none";
 }
