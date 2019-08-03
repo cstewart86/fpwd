@@ -1,4 +1,5 @@
-  let deferredPrompt = null;
+let deferredPrompt = null;
+let a2hsBtn = document.querySelector(".ad2hs-prompt");
 
 window.addEventListener('beforeinstallprompt', (e) => {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
@@ -11,8 +12,6 @@ window.addEventListener('beforeinstallprompt', (e) => {
 });
 
 function showAddToHomeScreen() {
-
-  let a2hsBtn = document.querySelector(".ad2hs-prompt");
 
   a2hsBtn.style.display = "block";
 
@@ -36,7 +35,7 @@ async function install() {
 
 
   }
-  let a2hsBtn = document.querySelector(".ad2hs-prompt");
 
   a2hsBtn.style.display = "none";
+
 }
