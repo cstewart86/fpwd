@@ -1,6 +1,6 @@
 'use strict';
 
-const version = '04082019::';
+const version = 'VOID03082019::';
 // Caches for different resources
 const coreCacheName = version + 'core';
 const pagesCacheName = version + 'pages';
