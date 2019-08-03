@@ -26,6 +26,7 @@ blurb:
     disorder and general learning difficulties.
 volunteer:
   heading: Looking to volunteer in Uganda?
+  image: /img/geraldine.jpg
   text: >-
     If you're looking to volunteer in Uganda, we'd love for you to consider
     spending time at Friends of People with Disabilities.
@@ -36,6 +37,7 @@ volunteer:
     to help.
 donate:
   heading: Support our work with a donation
+  image: /img/children-playing.jpg
   text: >-
     We're a small charity with a big mission and we rely on the generosity of
     our supporters to carry out our work.
