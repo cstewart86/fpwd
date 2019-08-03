@@ -736,6 +736,6 @@ float: right;
 line-height: 50px;
 }
 
-.share-button:after {
+.share-button::after {
 content: 'Share';
 }
