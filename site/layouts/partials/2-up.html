@@ -10,3 +10,15 @@
     <a href="/volunteer/" class="btn">Learn about volunteering</a>
   </div>
 </div>
+<div class="card">
+	<div class="card-header">
+		<h2>{{.donate.heading}}</h2>
+		{{.donate.text | markdownify}}
+	</div>
+	<div class="card-body">
+		<img src="img/placeholder.jpg" data-src="img/children-playing.jpg" width="540" height="405" alt="" class="img-fluid js-lazy-image">
+	</div>
+	<div class="card-footer">
+		<a href="/donate/" class="btn">{{.donate.text}}</a>
+	</div>
+</div>
