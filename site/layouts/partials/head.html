@@ -10,7 +10,8 @@
 	<base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
 	<link rel="preload" href="/css/style.css" as="style">
 	<link rel="preload" href="/img/hero.jpg" type="image/jpeg" as="image">
-	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link rel="preload" href="https://fonts.gstatic.com/s/nunitosans/v5/pe0qMImSLYBIv1o4X1M8cce9I9tAcVwo.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="https://fonts.gstatic.com/s/nunitosans/v5/pe03MImSLYBIv1o4X1M8cc8GBs5tU1ECVZl_.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap" as="style">
 	<link rel="preload" href="/js/nav.js" as="script">
 	<link rel="preload" href="/js/lazyload.js" as="script" crossorigin>
