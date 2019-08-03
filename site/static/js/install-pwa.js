@@ -5,7 +5,20 @@ window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
   // Stash the event so it can be triggered later.
   deferredPrompt = e;
+
+  showAddToHomeScreen();
+
 });
+
+function showAddToHomeScreen() {
+
+  let a2hsBtn = document.querySelector(".ad2hs-prompt");
+
+  a2hsBtn.style.display = "block";
+
+  a2hsBtn.addEventListener("click", install);
+
+}
 
 async function install() {
   if (deferredPrompt) {
