@@ -1,6 +1,6 @@
 ---
 title: Volunteer in Uganda
-image: /img/hero.jpg
+image: /img/geraldine.jpg
 metaDescription: >-
   We rely on the help of volunteers to support the work of our disability
   centre. If you're looking to volunteer in Uganda, we'd love to hear from you.
