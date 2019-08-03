@@ -1,3 +1,11 @@
+ let shareButton = document.querySelector('.share-button');
+
+if (navigator.share) {
+
+  shareButton.style.display = "block";
+
+}
+
 function sharePage() {
 let url = document.location.href;
 const canonicalElement = document.querySelector('link[rel=canonical]');
@@ -8,9 +16,6 @@ let title = document.querySelector('h1').textContent;
 let text = document.querySelector("meta[name='description']").getAttribute('content');
 
 if (navigator.share) {
-
-  let shareButton = document.querySelector('.share-button');
-  shareButton.style.display = "block";
 
   navigator.share({
       title: title,
