@@ -733,6 +733,7 @@ height: 50px;
 border: none;
 margin: 0 0 15px 15px;
 float: right;
+line-height: 50px;
 }
 
 .share-button:after {
