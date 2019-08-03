@@ -25,7 +25,7 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Meta description, name: metaDescription, widget: text}
+          - {label: Meta description, name: metaDescription, widget: text, pattern: [".{130,160}", "Must be between 130 and 160 characters"]}
           - {label: Image, name: image, widget: image}
           - {label: "Blurb", name: blurb, widget: object, fields: [
               {label: "Heading", name: "heading", widget: string},
