@@ -5,18 +5,18 @@
 	<title>{{ .Title }} | {{ $.Site.Title }}</title>
 	{{ end }}
 
-	<link rel="stylesheet" href="/css/style.css">
-
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 	<meta name="description" content="{{ .Params.metaDescription }}">
 	<base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
+	<link rel="preload" href="/css/style.css" as="style">
 	<link rel="preload" href="/img/hero.jpg" type="image/jpeg" as="image">
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 	<link rel="preload" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap" as="style">
 	<link rel="preload" href="/js/nav.js" as="script">
 	<link rel="preload" href="/js/share.js" as="script">
 	<link rel="preload" href="/js/install-pwa.js" as="script">
+	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap">
 
 	<!-- Favicons -->
