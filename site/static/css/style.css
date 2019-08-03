@@ -199,9 +199,6 @@ h4 {
   .container {
     max-width: 720px;
   }
-  .hideDesktop {
-    display-none;
-  }
 }
 
 @media (min-width: 992px) {
@@ -718,4 +715,8 @@ padding-left:0;
 .navbar{
 background-color:#E55812;
 }
+}
+
+.ad2hs-prompt {
+display: none;
 }
