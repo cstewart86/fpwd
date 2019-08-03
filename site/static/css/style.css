@@ -720,3 +720,9 @@ background-color:#E55812;
 .ad2hs-prompt {
 display: none;
 }
+
+.ad2hs-prompt button {
+background-color: #fff;
+color: #e55812;
+border-color: #fff;
+}
