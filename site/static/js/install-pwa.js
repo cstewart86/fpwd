@@ -16,8 +16,6 @@ function showAddToHomeScreen() {
 
   a2hsBtn.style.display = "block";
 
-  a2hsBtn.addEventListener("click", install);
-
 }
 
 async function install() {
