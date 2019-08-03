@@ -1,3 +1,4 @@
 /
   Link: </css/style.css>; rel=preload; as=style
   Link: </js/nav.js>; rel=preload; as=script
+  Link: </img/hero.jpg>; rel=preload; as=image
