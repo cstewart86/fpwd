@@ -735,9 +735,3 @@ margin: 0 0 15px 15px;
 float: right;
 line-height: 50px;
 }
-
-.share-button::after {
-content: 'Share';
-display: block;
-margin-top: 50px;
-}
