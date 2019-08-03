@@ -8,6 +8,10 @@ let title = document.querySelector('h1').textContent;
 let text = document.querySelector("meta[name='description']").getAttribute('content');
 
 if (navigator.share) {
+
+  let shareButton = document.querySelector('.share-button');
+  shareButton.style.display = "block";
+
   navigator.share({
       title: title,
       text: text,
