@@ -21,6 +21,7 @@ let text = document.querySelector("meta[name='description']").getAttribute('cont
       text: text,
       url: url,
   })
-    .then(() => console.log('Successful share'))
+    .then(() => console.log('Successful share'));
+    .then(() => showMessage(shareBtn, 'Thanks! 😄');
     .catch((error) => console.log('Error sharing', error));
 }
