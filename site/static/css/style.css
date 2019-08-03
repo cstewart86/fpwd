@@ -730,6 +730,7 @@ background-image: url('/img/3EB5348C-CF85-45B4-9588-E2BA263BFDB8.png');
 background-size: cover;
 width: 50px;
 height: 50px;
+padding: 25px;
 border: none;
 margin: 0 0 15px 15px;
 float: right;
