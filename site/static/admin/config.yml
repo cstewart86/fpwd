@@ -32,10 +32,12 @@ collections: # A list of collections the CMS should be able to edit
               {label: "Text", name: "text", widget: "markdown"}]}
           - {label: "Volunteer", name: volunteer, widget: object, fields: [
               {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "markdown"}]}
+              {label: "Text", name: "text", widget: "markdown"},
+              {label: Image, name: image, widget: image}]}
           - {label: "Donate", name: "donate", widget: "object", fields: [
               {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "markdown"}]}
+              {label: "Text", name: "text", widget: "markdown"},
+              {label: Image, name: image, widget: image}]}
       - file: "site/content/volunteer/_index.md"
         label: "Volunteer Page"
         name: "volunteer"
