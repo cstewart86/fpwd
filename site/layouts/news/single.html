@@ -1,4 +1,7 @@
 {{ define "main" }}
+
+{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
+
 <main class="container">
  <article class="row">
     <div class="col-md-12">
