@@ -16,7 +16,9 @@ const coreCacheUrls = [
   "/img/hero.jpg",
   "/css/style.css",  
   "/js/nav.js",
-  "/js/lazyload.js"  
+  "/js/lazyload.js",
+  "/js/share.js",
+  "/js/install-pwa.js"
 ];
 
 function updateCoreCache() {
