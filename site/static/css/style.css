@@ -734,7 +734,6 @@ border: none;
 margin: 0 0 15px 15px;
 float: right;
 line-height: 50px;
-display: inline-block;
 }
 
 .share-button::after {
