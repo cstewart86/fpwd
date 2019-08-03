@@ -6,22 +6,14 @@
  <article class="row">
     <div class="col-md-12">
     <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
-    <div class="flex justify-between grey-3">
+<button class="share-button"></button>
       <p>{{ .Date.Format "2 January 2006" }}</p>
       <p>{{ .ReadingTime }} minute read</p>
-    </div>
-    <div class="cms mw6">
       <p>{{ .Description }}</p>
       {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-fluid" />{{ end }}
       {{ .Content }}
     </div>
-    </div>
  </article>
- <section class="row">
-   <div class="col-md-12">
-     <button class="share-button"></button>
-   </div>
- </section>
 </main>
 
 {{ end }}
