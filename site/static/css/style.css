@@ -750,7 +750,7 @@ textarea.form-control {
   }
 }
 
-.ad2hs-prompt, .share-button {
+.ad2hs-prompt {
   display: none;
 }
 
@@ -761,6 +761,7 @@ textarea.form-control {
 }
 
 .share-button {
+  display: none;
   background-image: url('/img/3EB5348C-CF85-45B4-9588-E2BA263BFDB8.png');
   background-size: cover;
   width: 50px;
