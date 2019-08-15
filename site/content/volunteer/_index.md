@@ -5,6 +5,8 @@ metaDescription: >-
   We rely on the help of volunteers to support the work of our disability
   centre. If you're looking to volunteer in Uganda, we'd love to hear from you.
 ---
+Are you thinking of volunteering in Uganda? We'd love for you to spend some time with us.
+
 Our disability centre is run by Geraldine, an occupational therapist, and her children, Moses and Diana.
 
 However, due to the number of children we support, we rely on the help of volunteers to support our work.
